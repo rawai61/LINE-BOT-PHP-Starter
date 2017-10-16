@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 echo "OK";
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('<channel access token>');
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '<channel secret>']);
+$bot = new \LINE\LINEBot($httpClient, ['795f0abecb33a523dc346e84a3f4a0b2' => '<channel secret>']);
 $response = $bot->getProfile('<userId>');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
