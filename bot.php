@@ -1,6 +1,7 @@
 <?php
-$access_token = 'tILI2h91gdcdxXKaUpt/yfXgIXcmK0D20ExoP1ZRft04RYjWm0HeICcNbBxGAH27rhek9NU64myzM6r8kHyDZ3rFJsHSxy8sP+fVIwbb15ZNqeDXX2yUG6tUYzEUehJytvpzvGzYe32Rdq9m8exkywdB04t89/1O/w1cDnyilFU=';
-GET https://api.line.me/v2/bot/profile/{userId}
+$access_token = 'BXaPBnJWb5J4qD5bQSkApsWIQTNS2fUgAdg4MyftueNW2mHKrq5laVLXRjAzGE/arhek9NU64myzM6r8kHyDZ3rFJsHSxy8sP+fVIwbb15br8i0lEwSA+CWxkl1v6WDPqwh4beMoyJ5nEIHCOEet+wdB04t89/1O/w1cDnyilFU=
+';
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
