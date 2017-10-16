@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => ทดสอบครับ,
+				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -45,3 +45,13 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
+
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('<channel access token>');
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '<channel secret>']);
+$response = $bot->getProfile('<userId>');
+if ($response->isSucceeded()) {
+    $profile = $response->getJSONDecodedBody();
+    echo $profile['displayName'];
+    echo $profile['pictureUrl'];
+    echo $profile['statusMessage'];
+}
